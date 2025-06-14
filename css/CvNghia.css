@@ -1,0 +1,167 @@
+/*Áp dụng font chữ cho tất cả*/
+* {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Đặt màu cho background của phần tử body */
+body {
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+/* Tắt các ký hiệu của list */
+ol {
+    list-style-type: none;
+}
+
+/* Đặt độ đậm cho thẻ span */
+span {
+    font-weight: 600;
+}
+
+/* Đặt position và màu chữ cho thẻ h2 */
+h2 {
+    position: relative;
+    color: rgb(164, 123, 0);
+}
+
+/* Đặt thuộc tính cho đường gạch ngang */
+hr {
+    border: none;
+    border-top-style: dashed;
+    border-top-color: rgb(190, 142, 0, 0.3);
+}
+
+/* Áp dụng layout grid cho thẻ có class .container */
+.container {
+    padding: 10px 350px;
+    display: grid;
+    grid-template-columns: 1.1fr 2fr;
+    gap: 2px;
+}
+
+/* Áp dụng layout flex cho thẻ có class .intro-nav-bar */
+.intro-nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-bottom: 14px;
+}
+
+/* Chỉnh style khung hình đại diện */
+.avatar-frame {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    padding: 5px;
+    border: 2.3px dashed rgb(255, 102, 0);
+    border-radius: 100%;
+}
+
+/* Chỉnh style cho ảnh đại diện */
+.avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    
+}
+
+/* Chỉnh style cho tất cả thẻ p trong class .left-info */
+.left-info p {
+    text-indent: 25px;
+    text-align: justify;
+}
+
+
+/* Chỉnh style cho thẻ có class .half-line-project */
+.half-line-project {
+    position: absolute;
+    background-color: rgb(190, 142, 0, 0.3);
+    width: 60%;
+    height: 7%;
+    top: 57%;
+    left: 38%;
+}
+
+/* Chỉnh style cho thẻ có class .half-line-prize */
+.half-line-prize {
+    position: absolute;
+    background-color: rgb(190, 142, 0, 0.3);
+    width: 40%;
+    height: 7%;
+    top: 58%;
+    left: 58%;
+}
+
+/* Đặt kiểu chạy animation cho thẻ có class .intro (chạy từ trên xuống)*/
+@keyframes craft_head{
+    from {
+        top: -400px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+/* Đặt kiểu chạy animation cho thẻ có class .left-info (chạy từ trái qua)*/
+@keyframes craft_left{
+    from {
+        left: -1000px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+/* Đặt kiểu chạy animation cho thẻ có class .right-info (chạy từ phải qua)*/
+@keyframes craft_right{
+    from {
+        right: -1000px;
+    }
+
+    to {
+        right: 0px;
+    }
+}
+
+/* Áp dụng animation cho thẻ có class .intro */
+.intro {
+    text-align: center;
+    background-color: rgb(255, 170, 0, 0.15);
+    grid-column: 1 / span 2;
+    box-shadow: 1px -2px 10px 0px rgb(0, 0, 0,0.2);
+    position: relative;
+    animation-name: craft_head;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+}
+
+/* Áp dụng animation cho thẻ có class .left-info */
+.left-info {
+    position: relative;
+    box-shadow: 1px -2px 10px 0px rgb(0, 0, 0,0.2);
+    background-color: rgb(255, 170, 0, 0.15);
+    padding: 0px 10px 10px 10px;
+
+    animation-name: craft_left;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+}
+
+/* Áp dụng animation cho thẻ có class .right-info */
+.right-info {
+    position: relative;
+    box-shadow: 1px -2px 10px 0px rgb(0, 0, 0,0.2);
+    padding: 0px 10px 10px 10px;
+    background-color: white;
+
+    animation-name: craft_right;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+}

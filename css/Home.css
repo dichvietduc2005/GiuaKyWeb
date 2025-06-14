@@ -1,0 +1,243 @@
+body {
+    background-color: grey;
+}
+
+.flex-container {
+    position: absolute;
+    display: flex;
+    background-color: rgba(138, 138, 138, 0.3);
+    width: 100%;
+    height: 350px;
+    top: 40%;
+    gap: 150px;
+    justify-content: center;
+}
+
+@keyframes scale-card {
+    from {
+        transform: scale(5, 5);
+        background-color: transparent;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1,1) rotateY(180deg);
+        background-color: transparent;
+    }
+}
+
+p{
+    text-align: center;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+}
+
+a{
+    display: block;
+}
+
+.card1 {
+    position: relative;
+    background-color: transparent;
+    flex-basis: 250px;
+    perspective: 1000px;
+}
+
+.card1 .flip-card-inner {
+    animation-name: scale-card;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    transition: transform 1s, top 1s;
+    transform-style: preserve-3d;
+}
+
+.card1:hover .flip-card-inner {
+    position: relative;
+    transform: rotateY(-180deg);
+    cursor: pointer;
+    top: -100px;
+}
+
+.card1 .flip-card-front-face,.flip-card-back-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    border-radius: 10%;
+}
+
+.card1 .flip-card-front-face {
+    background-image: url(../img/m1.jpg);
+    background-size: cover;
+    box-shadow: 0px 0px 20px 1px rgb(0, 0, 0, 0.5);
+}
+
+.card1 .flip-card-back-face {
+    background-image: url(../img/mb1.png) ,url(../img/mn1.jpg);
+    background-size: cover;
+    transform: rotateY(180deg);
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card1 .card1-info{
+    position: absolute;
+    top: 150px;
+    right: -20px;
+    transition: color 0.3s, top 0.8s, font-size 0.3s;
+    z-index: -1;
+    color: transparent;
+    width: 400px;
+}
+
+.card1:hover .card1-info{
+    top: 240px;
+    color: black;
+    font-size: 25px;
+    right: -75px;
+}
+
+.card2 {
+    background-color: transparent;
+    flex-basis: 250px;
+    perspective: 1000px;
+}
+
+.card2 .flip-card-inner {
+    position: relative;
+    animation-name: scale-card;
+    animation-duration: 0.7s;
+    animation-fill-mode: backwards;
+    animation-delay: 0.3s;
+    animation-timing-function: ease-in;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    transition: transform 1s, top 1s;
+    transform-style: preserve-3d;
+}
+
+.card2:hover .flip-card-inner {
+    position: relative;
+    transform: rotateY(-180deg);
+    cursor: pointer;
+    top: -100px;
+}
+
+.card2 .flip-card-front-face,.flip-card-back-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    border-radius: 10%;
+}
+
+.card2 .flip-card-front-face {
+    background-image: url(../img/m2.jpg);
+    background-size: cover;
+    box-shadow: 0px 0px 20px 1px rgb(0, 0, 0, 0.5);
+}
+
+.card2 .flip-card-back-face {
+    background-image: url(../img/mb2.png) ,url(../img/mn2.jpg);
+    background-size: cover;
+    transform: rotateY(180deg);
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card2 .card2-info{
+    position: absolute;
+    top: 150px;
+    right: -20px;
+    transition: color 0.3s, top 0.8s, font-size 0.3s;
+    z-index: -1;
+    color: transparent;
+}
+
+.card2:hover .card2-info{
+    top: 240px;
+    color: black;
+    font-size: 25px;
+    right: -5px;
+}
+
+.card3 {
+    background-color: transparent;
+    flex-basis: 250px;
+    perspective: 1000px;
+}
+
+.card3 .flip-card-inner {
+    position: relative;
+    animation-name: scale-card;
+    animation-duration: 0.7s;
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
+    animation-timing-function: ease-in;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    transition: transform 1s, top 1s;
+    transform-style: preserve-3d;
+}
+
+.card3:hover .flip-card-inner {
+    position: relative;
+    transform: rotateY(-180deg);
+    cursor: pointer;
+    top: -100px;
+}
+
+.card3 .flip-card-front-face,.flip-card-back-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    border-radius: 10%;
+}
+
+.card3 .flip-card-front-face {
+    background-image: url(../img/m3.jpg);
+    background-size: cover;
+    box-shadow: 0px 0px 20px 1px rgb(0, 0, 0, 0.5);
+}
+
+.card3 .flip-card-back-face {
+    background-image: url(../img/mb3.png),url(../img/mn3.png);
+
+    background-size: cover;
+    transform: rotateY(180deg);
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card3 .card3-info{
+    position: absolute;
+    top: 150px;
+    right: -30px;
+    transition: color 0.3s, top 0.8s, font-size 0.3s;
+    z-index: -1;
+    color: transparent;
+    width: 300px;
+}
+
+.card3:hover .card3-info{
+    top: 240px;
+    color: black;
+    font-size: 25px;
+    right: -25px;
+}
+
+h1{
+    position: absolute;
+    top: 0;
+    font-size: 70px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

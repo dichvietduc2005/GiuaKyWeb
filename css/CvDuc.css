@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eee;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 6px;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar {
+    width: 30%;
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 20px;
+
+}
+
+.avatar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.4s , box-shadow 0.3s;
+
+}
+
+.avatar:hover {
+    transform: rotate(-10deg) scale(1.05);
+    box-shadow: 0 0 20px 5px #6ba2d1;
+}
+
+.name {
+    font-size: 22px;
+    color: #6ba2d1;
+    margin-bottom: 5px;
+    text-align: center;
+    border-bottom: none;
+}
+
+.job-title {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.info-section h3 {
+    margin-top: 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.contact,
+.languages,
+.skills,
+.hobbies,
+.certificates,
+.socials {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+    
+}
+
+
+
+.goal{
+    margin-top: 0;
+    padding-left: 6;
+    list-style: none;
+}
+
+.education {
+    padding-left: 0px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.education-name{
+    font-size: 18px;
+}
+
+.certificates{
+    margin-top: 0;
+}
+
+.projects {
+    margin-top: 0;
+    padding-left: 0px;
+    margin-bottom: 10px;
+    list-style: none;
+
+}
+
+.projects > li {
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.projects > li >ul{
+    padding: 10px 23px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.projects-title{
+    font-size:18px;
+    font-weight: bold;
+    padding-left: 0;
+    
+    
+}
+
+
+.contact li,
+.languages li,
+.hobbies li,
+.goal li,
+.certificates li,
+.education li,
+.projects li {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: infoFadeIn 0.7s forwards;
+    animation-delay: calc(0.07s * var(--i));
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 2px 6px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@keyframes infoFadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.contact li:hover,
+.languages li:hover,
+.hobbies li:hover,
+.goal li:hover,
+.certificates li:hover,
+.education li:hover,
+.projects li:hover {
+    background: #c7dbf5;
+    color: #222;
+    transform: translateX(8px) scale(1.05);
+}
+
+.main-content {
+    width: 70%;
+    padding: 20px;
+}
+
+
+.section-title {
+  display: flex;
+  align-items: center;
+  color: #6ba2d1;
+  font-weight: bold;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: sideIn 0.8s forwards;
+}
+
+@keyframes sideIn{
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.section-title i{
+    margin-right: 10px;
+}
+
+.section-title .line {
+  flex: 1;
+  height: 2px;
+  background: #6ba2d1;
+  margin-left: 10px;
+}
+
+
+.progress-bar {
+    background-color: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-bar-fill {
+    background-color: #6ba2d1;
+    height: 10px;
+}
