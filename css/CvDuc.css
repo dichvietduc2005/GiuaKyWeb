@@ -160,7 +160,7 @@ body {
     width: 100%;
     box-sizing: border-box;
 }
-
+/* Hiệu ứng fade-in cho các mục thông tin */
 @keyframes infoFadeIn {
     to {
         opacity: 1;
@@ -201,6 +201,7 @@ body {
     animation: sideIn 0.8s forwards;
 }
 
+/* Hiệu ứng side-in cho tiêu đề section */
 @keyframes sideIn{
     to{
         opacity: 1;
@@ -227,6 +228,7 @@ body {
     margin-bottom: 10px;
 }
 
+/* Thanh tiến trình bên trong */
 .progress-bar-fill {
     background-color: #6ba2d1;
     height: 10px;
