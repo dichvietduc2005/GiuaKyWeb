@@ -1,3 +1,5 @@
+/* Định dạng chung cho toàn bộ trang */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #eee;
@@ -5,6 +7,8 @@ body {
     line-height: 1.8;
     margin-bottom: 6px;
 }
+
+/* Định dạng container chính */
 
 .container {
     display: flex;
@@ -14,6 +18,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Sidebar bên trái */
+
 .sidebar {
     width: 30%;
     background-color: #1f1f1f;
@@ -22,6 +28,7 @@ body {
 
 }
 
+/* Định dạng avatar hình tròn */
 .avatar {
     display: block;
     margin-left: auto;
@@ -63,6 +70,8 @@ body {
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
+
+/* Danh sách liên hệ, sở thích, ngôn ngữ, kỹ năng */
 
 .contact,
 .languages,
@@ -112,6 +121,8 @@ body {
     width: 100%;
 }
 
+/* Định dạng danh sách con trong dự án */
+
 .projects > li >ul{
     padding: 10px 23px;
     width: 100%;
@@ -127,7 +138,7 @@ body {
     
 }
 
-
+/* Hiệu ứng hover cho các mục thông tin */
 .contact li,
 .languages li,
 .hobbies li,
@@ -139,6 +150,8 @@ body {
     transform: translateX(-30px);
     animation: infoFadeIn 0.7s forwards;
     animation-delay: calc(0.07s * var(--i));
+        /* Hiệu ứng hover cho liên hệ */
+
     transition: background 0.3s, color 0.3s, transform 0.3s;
     cursor: pointer;
     border-radius: 4px;
@@ -173,6 +186,7 @@ body {
     padding: 20px;
 }
 
+/* Tiêu đề các section */
 
 .section-title {
   display: flex;
